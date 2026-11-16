@@ -1,0 +1,19 @@
+[package]
+name = "capyvault-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+capyvault-core = { path = "../capyvault-core" }
+rfd.workspace = true
+arboard.workspace = true
+zeroize.workspace = true
+csv.workspace = true
+windows-sys.workspace = true
+
+[target.'cfg(not(target_os = "android"))'.dependencies]
+eframe = { workspace = true, features = ["default_fonts", "glow", "x11", "wayland"] }
+
+[target.'cfg(target_os = "android")'.dependencies]
+eframe = { workspace = true, features = ["default_fonts", "glow", "android-native-activity"] }

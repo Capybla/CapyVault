@@ -1,0 +1,25 @@
+# Build output and release binaries
+/target/
+/dist/
+/android/.gradle/
+/android/app/build/
+/android/build/
+
+# Local vault data and encrypted backup history
+/Main.capyvault
+/Main.capyvault.lock
+/Backups/
+*.capyvault.lock
+
+# Per-machine SDK paths and IDE files
+/android/local.properties
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Temporary and exported credential files
+*.tmp
+*.temp
+/export/
+/exports/
